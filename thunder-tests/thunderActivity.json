@@ -1,0 +1,174 @@
+[
+    {
+        "_id": "ebcc7e6f-2448-417a-ac9f-3535d5ec775d",
+        "colId": "history",
+        "containerId": "",
+        "name": "http://127.0.0.1:8000/api/v1/customers?state[eq]=Idaho&includeInvoices=true",
+        "url": "http://127.0.0.1:8000/api/v1/customers/231?includeInvoices=true",
+        "method": "GET",
+        "sortNum": 0,
+        "created": "2023-08-10T09:12:53.677Z",
+        "modified": "2023-08-10T11:11:29.798Z",
+        "headers": [],
+        "params": [
+            {
+                "name": "includeInvoices",
+                "value": "true",
+                "isPath": false
+            }
+        ],
+        "tests": []
+    },
+    {
+        "_id": "33d6b538-e5a0-4053-b756-551b6572ed85",
+        "colId": "history",
+        "containerId": "",
+        "name": "http://127.0.0.1:8000/api/v1/customers",
+        "url": "http://127.0.0.1:8000/api/v1/customers",
+        "method": "POST",
+        "sortNum": 0,
+        "created": "2023-08-10T09:14:51.097Z",
+        "modified": "2023-08-10T09:35:07.494Z",
+        "headers": [
+            {
+                "name": "Accept",
+                "value": "application/json"
+            }
+        ],
+        "params": [],
+        "body": {
+            "type": "json",
+            "raw": "{\n  \"name\": \"james\",\n  \"type\": \"i\",\n  \"email\": \"james@mail.com\",\n  \"address\": \"somewhere street\",\n  \"city\": \"tokyo\",\n  \"state\": \"tokyo state\",\n  \"postalCode\": \"8888\"\n}",
+            "form": []
+        },
+        "tests": []
+    },
+    {
+        "_id": "d788bf33-9232-4600-afd5-7bcfc6c2787e",
+        "colId": "history",
+        "containerId": "",
+        "name": "http://127.0.0.1:8000/api/v1/customers?city[eq]=tokyo",
+        "url": "http://127.0.0.1:8000/api/v1/customers?city[eq]=tokyo",
+        "method": "GET",
+        "sortNum": 0,
+        "created": "2023-08-10T09:35:47.743Z",
+        "modified": "2023-08-10T09:35:47.743Z",
+        "headers": [],
+        "params": [
+            {
+                "name": "city[eq]",
+                "value": "tokyo",
+                "isPath": false
+            }
+        ],
+        "tests": []
+    },
+    {
+        "_id": "c0631ba8-344d-4ea0-9b34-5675404059d1",
+        "colId": "history",
+        "containerId": "",
+        "name": "http://127.0.0.1:8000/api/v1/customers",
+        "url": "http://127.0.0.1:8000/api/v1/customers/232",
+        "method": "PATCH",
+        "sortNum": 0,
+        "created": "2023-08-10T09:50:44.356Z",
+        "modified": "2023-08-10T09:58:52.304Z",
+        "headers": [
+            {
+                "name": "Accept",
+                "value": "application/json"
+            }
+        ],
+        "params": [],
+        "body": {
+            "type": "json",
+            "raw": "{\n  \"postalCode\": \"99888\"\n}",
+            "form": []
+        },
+        "tests": []
+    },
+    {
+        "_id": "68438f5d-4d6b-4b91-bc3d-a84adb0e8097",
+        "colId": "history",
+        "containerId": "",
+        "name": "BULK-INSERT-INVOICE",
+        "url": "http://127.0.0.1:8000/api/v1/invoices/bulk",
+        "method": "POST",
+        "sortNum": 0,
+        "created": "2023-08-10T11:05:58.156Z",
+        "modified": "2023-08-10T11:27:02.262Z",
+        "headers": [
+            {
+                "name": "Accept",
+                "value": "application/json"
+            }
+        ],
+        "params": [],
+        "body": {
+            "type": "json",
+            "raw": "[\n  {\n    \"customerId\": 232,\n    \"status\": \"B\",\n    \"amount\": 123456,\n    \"billedDate\": \"2023-08-10 18:07:45\",\n    \"paidDate\": null\n  },\n    {\n    \"customerId\": 232,\n    \"status\": \"P\",\n     \"amount\": 23423,\n    \"billedDate\": \"2023-08-10 18:07:45\",\n    \"paidDate\": \"2023-08-10 18:07:45\"\n  },\n    {\n    \"customerId\": 232,\n    \"status\": \"B\",\n     \"amount\": 564564,\n    \"billedDate\": \"2023-08-10 18:07:45\",\n    \"paidDate\": null\n  }\n]",
+            "form": []
+        },
+        "tests": []
+    },
+    {
+        "_id": "1927ab00-8e47-47dd-bc97-20eccc24e498",
+        "colId": "history",
+        "containerId": "",
+        "name": "http://127.0.0.1:8000/api/v1/invoices?customerId[eq]=231",
+        "url": "http://127.0.0.1:8000/api/v1/invoices?customerId[eq]=232",
+        "method": "GET",
+        "sortNum": 0,
+        "created": "2023-08-10T11:12:06.835Z",
+        "modified": "2023-08-10T11:25:28.596Z",
+        "headers": [],
+        "params": [
+            {
+                "name": "customerId[eq]",
+                "value": "232",
+                "isPath": false
+            }
+        ],
+        "tests": []
+    },
+    {
+        "_id": "65fa51c9-34c9-46f9-a6d9-c471732340b5",
+        "colId": "history",
+        "containerId": "",
+        "name": "http://127.0.0.1:8000/api/v1/invoices",
+        "url": "http://127.0.0.1:8000/api/v1/invoices?customerId[eq]=231",
+        "method": "GET",
+        "sortNum": 0,
+        "created": "2023-08-10T11:12:30.208Z",
+        "modified": "2023-08-10T11:24:59.164Z",
+        "headers": [],
+        "params": [
+            {
+                "name": "customerId[eq]",
+                "value": "231",
+                "isPath": false
+            }
+        ],
+        "tests": []
+    },
+    {
+        "_id": "e1f92291-0fa2-4287-8a73-7c8fdb051db8",
+        "colId": "history",
+        "containerId": "",
+        "name": "http://127.0.0.1:8000/api/v1/invoices?page=70",
+        "url": "http://127.0.0.1:8000/api/v1/invoices?page=70",
+        "method": "GET",
+        "sortNum": 0,
+        "created": "2023-08-10T11:12:44.758Z",
+        "modified": "2023-08-10T11:12:44.758Z",
+        "headers": [],
+        "params": [
+            {
+                "name": "page",
+                "value": "70",
+                "isPath": false
+            }
+        ],
+        "tests": []
+    }
+]
